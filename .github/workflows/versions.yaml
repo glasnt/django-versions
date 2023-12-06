@@ -18,11 +18,9 @@ jobs:
 
       - name: Install requirements
         run: pip install -r requirements.txt
-      - name: Display Versions
+      - name: Display Versions, Update, and Check
         run: |
           python -c "import sys; print(sys.version)"
           pip freeze | grep Django
-      - name: Update and check 
-        run: |
-          pip install django --upgrade 
+          pip install django pip --upgrade 
           pip freeze | grep Django
