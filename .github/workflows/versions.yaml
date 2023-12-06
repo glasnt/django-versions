@@ -24,5 +24,5 @@ jobs:
           pip freeze | grep Django
       - name: Update and check 
         run: |
-          pip install django --update 
+          pip install django --upgrade 
           pip freeze | grep Django
