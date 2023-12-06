@@ -23,5 +23,6 @@ jobs:
           python -c "import sys; print(sys.version)"
           pip freeze | grep Django
       - name: Update and check 
+        run: |
           pip install django --update 
           pip freeze | grep Django
